@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CPU_Scheduling_visualizer</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    
+    <div class="container-fluid my-4">
+      <div class="jumbotron">
+        <h1 class="display-4">CPU Scheduling Alogrithms Visualizer</h1>
+
+        <p class="lead">
+          The Gantt Charts of the algorithms are displayed after you enter the
+          details of the processes.
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card-deck">
+        <!--FCFS card-->
+        <div class="card fcfs-card" onclick="fcfs_clicked()">
+          <div class="card-img-top">
+            <img class="fcfs-img sch-img" src="FCFS8.png" alt="fcfs-img" />
+          </div>
+          <div class="card-body">
+            <div class="card-title"><h5>FCFS</h5></div>
+            <div class="card-text">
+              Execute queued tasks, processes and requests by the order of their
+              arrival
+            </div>
+          </div>
+
+          <div class="card-footer text-center">
+            <a href="fcfs.html" class="text-white">
+              <button class="btn-block btn-dark fcfs-btn">FCFS</button>
+            </a>
+          </div>
+        </div>
+
+        <!--SJF card-->
+        <div class="card sjf-card" onclick="sjf_clicked()">
+          <div class="card-img-top">
+            <img class="fcfs-img sch-img" src="sjf.jfif" alt="fcfs-img" />
+          </div>
+          <div class="card-body">
+            <div class="card-title"><h5>SJF</h5></div>
+            <div class="card-text">
+              selects the waiting process with the smallest execution time to
+              execute next
+            </div>
+          </div>
+
+          <div class="card-footer text-center">
+            <a href="sjf.html" class="text-white">
+              <button class="btn-block btn-dark sjf-btn">SJF</button>
+            </a>
+          </div>
+        </div>
+
+        <!--Priority card-->
+        <div class="card priority-card" onclick="priority_clicked()">
+          <div class="card-img-top mb-4">
+            <img
+              class="fcfs-img sch-img"
+              src="priority.png"
+              alt="priority-img"
+            />
+          </div>
+          <div class="card-body">
+            <div class="card-title"><h5>Priority</h5></div>
+            <div class="card-text">
+              Scheduler chooses the tasks to work as per the priority
+            </div>
+          </div>
+
+          <div class="card-footer text-center">
+            <a href="priority.html" class="text-white">
+              <button class="btn-block btn-dark priority-btn">Priority</button>
+            </a>
+          </div>
+        </div>
+
+        <!--ROund robin card-->
+        <div class="card rr-card" onclick="rr_clicked()">
+          <div class="card-img-top text-center">
+            <img
+              class="round-img"
+              src="roundrobin.png"
+              alt="fcfs-img"
+              stye="width: 50%;"
+            />
+          </div>
+          <div class="card-body">
+            <div class="card-title"><h5>Round Robin</h5></div>
+            <div class="card-text">
+              CPU is assigned to the process on the basis of FCFS for a fixed
+              amount of time
+            </div>
+          </div>
+
+          <div class="card-footer text-center">
+            <a href="rr.html" class="text-white">
+              <button class="btn-block btn-dark rr-btn">Round Robin</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark">
+      
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

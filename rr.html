@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Round Robin</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="fcfsstyles.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    
+
+    <div class="container-fluid my-4">
+      <div class="jumbotron">
+        <h4>Round Robin CPU Scheduling</h4>
+        <p class="lead">
+          The name of this algorithm comes from the round-robin principle, where
+          each person gets an equal share of something in turns. It is the
+          oldest, simplest scheduling algorithm, which is mostly used for
+          multitasking. In Round-robin scheduling, each ready task runs turn by
+          turn only in a cyclic queue for a limited time slice. This algorithm
+          also offers starvation free execution of processes.
+        </p>
+
+        <div>
+          <h6>ADVANTAGES</h6>
+          <ul style="font-weight: 300">
+            <li>Every process gets an equal share of the CPU.</li>
+            <li>RR is cyclic in nature, so there is no starvation.</li>
+          </ul>
+          <h6>DISADVANTAGES</h6>
+          <ul style="font-weight: 300">
+            <li>
+              Setting the quantum too short, increases the overhead and lowers
+              the CPU efficiency, but setting it too long may cause poor
+              response to short processes.
+            </li>
+            <li>Average waiting time under the RR policy is often long.</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr style="background-color: grey; height: 3px" />
+    </div>
+
+    <div class="container">
+      <table class="table" id="inputTable">
+        <thead>
+          <tr>
+            <th scope="col">Process</th>
+            <th scope="col">Arrival Time</th>
+            <th scope="col">Execute Time</th>
+            <th class="servtime" scope="col">Service Time</th>
+            <th class="priority-only" scope="col">Priority</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>P0</td>
+          <td>0</td>
+          <td><input class="initial exectime" type="number" value="5" /></td>
+          <td class="servtime"></td>
+          <td class="priority-only initial"><input type="text" /></td>
+        </tr>
+        <tr>
+          <td>P1</td>
+          <td>1</td>
+          <td><input class="initial exectime" type="number" value="3" /></td>
+          <td class="servtime"></td>
+          <td class="priority-only"><input type="text" /></td>
+        </tr>
+      </table>
+
+      <input
+        id="minus"
+        style="display: inline"
+        type="button"
+        value="-"
+        onclick="deleteRow();"
+        class="btn btn-danger"
+      />
+      <input
+        type="button"
+        value="+"
+        onclick="addRow();"
+        class="btn btn-success"
+      />
+
+      <div>
+        <p id="quantumParagraph" class="my-3">
+          Time Slice/Quantum:
+          <input style="width: 50px" id="quantum" type="number" value="3" />
+        </p>
+        <input
+          type="button"
+          value="Go"
+          onclick="draw();"
+          class="btn btn-primary my-2"
+        />
+        <br /><br />
+
+        <fresh> </fresh>
+        <p>Timer: <strong id="timer"></strong> sec</p>
+      </div>
+    </div>
+
+    <footer class="bg-dark py-4 mt-3">
+      
+    </footer>
+
+    <script src="rrscript.js"></script>
+  </body>
+</html>

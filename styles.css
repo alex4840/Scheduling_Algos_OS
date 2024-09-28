@@ -1,0 +1,106 @@
+body{
+  background-color:  #12101b;
+}
+
+.navbar{
+  border-bottom: 1.5px solid #0d100e;
+}
+
+.navbar-brand img {
+  border-radius: 100%;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card-footer {
+  border-top: 1.5px solid #0e100f;
+  background-color: #12101b;
+}
+
+.jumbotron {
+  border: 1.5px solid #081434;
+  background: #2c2937;
+  color: aliceblue;
+}
+
+.jumbotron:hover {
+  box-shadow: 0 4px 4px 0 rgb(28, 9, 9);
+}
+
+.fcfs-img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+footer {
+  border-top: 1.5px solid #001018;
+  margin-top: 40px;
+  padding: 40px;
+}
+
+.fcfs-btn,
+.sjf-btn,
+.priority-btn,
+.rr-btn {
+  border-radius: 5px;
+  background-color: #12101b;
+  text-decoration: none;
+  padding: 10px;
+}
+a.text-white {
+  text-decoration: none;
+}
+
+a.text-white:hover {
+  text-decoration: none;
+}
+
+
+/* .fcfs-card:hover {
+  border: 1.5px solid #47cf73;
+  box-shadow: 0 4px 4px 0 rgb(232, 231, 231);
+} */
+
+.fcfs-btn:hover {
+  background: linear-gradient(left, black,blue);
+  box-shadow: 0 4px 4px 0 #12101b;
+  text-decoration: none;
+}
+
+/* .sjf-card:hover {
+  border: 1px solid #47cf73;
+  box-shadow: 0 4px 4px 0 rgb(185, 185, 185);
+} */
+.sjf-btn:hover {
+  background: linear-gradient(left, black,blue);
+  box-shadow: 0 4px 4px 0 #12101b;
+}
+/* 
+.priority-card:hover {
+  border: 1px solid #47cf73;
+  box-shadow: 0 4px 4px 0 rgb(185, 185, 185);
+} */
+.priority-btn:hover {
+  background: linear-gradient(left, black,blue);
+  box-shadow: 0 4px 4px 0 #12101b;
+}
+
+/* .rr-card:hover {
+  border: 1px solid #47cf73;
+  box-shadow: 0 4px 4px 0 rgb(185, 185, 185);
+} */
+.rr-btn:hover {
+  background: linear-gradient(left, black,blue);
+  box-shadow: 0 4px 4px 0 #12101b;
+  text-decoration: none;
+}
+.card-body{
+  background-color: #12101b;
+  color: cornsilk;
+  border: #12101b;
+}
+.card{
+  border: #2c2937;
+}

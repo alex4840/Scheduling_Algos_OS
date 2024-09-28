@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Priority</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="fcfsstyles.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    
+
+    <div class="container-fluid my-4">
+      <div class="jumbotron">
+        <h4>Priority CPU Scheduling</h4>
+        <p class="lead">
+          Priority Scheduling is a method of scheduling processes that is based
+          on priority. In this algorithm, the scheduler selects the tasks to
+          work as per the priority. The processes with higher priority should be
+          carried out first, whereas jobs with equal priorities are carried out
+          on a round-robin or FCFS basis. Priority depends upon memory
+          requirements, time requirements, etc.
+        </p>
+
+        <div>
+          <h6>ADVANTAGES</h6>
+          <ul style="font-weight: 300">
+            <li>
+              This provides a good mechanism where the relative importance of
+              each process maybe precisely defined.
+            </li>
+          </ul>
+          <h6>DISADVANTAGES</h6>
+          <ul style="font-weight: 300">
+            <li>
+              If high priority processes use up a lot of CPU time, lower
+              priority processes may starve and be postponed indefinitely.The
+              situation where a process never gets scheduled to run is called
+              starvation.
+            </li>
+            <li>
+              Another problem is deciding which process gets which priority
+              level assigned to it.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <hr style="background-color: grey; height: 3px" />
+    </div>
+
+    <div class="container">
+      <table class="table" id="inputTable">
+        <thead>
+          <tr>
+            <th scope="col">Process</th>
+            <th scope="col">Arrival Time</th>
+            <th scope="col">Execute Time</th>
+            <th class="servtime" scope="col">Service Time</th>
+            <th class="priority-only" scope="col">Priority</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>P0</td>
+          <td>0</td>
+          <td><input class="initial exectime" type="number" value="5" /></td>
+          <td class="servtime"></td>
+          <td class="priority-only initial"><input type="text" /></td>
+        </tr>
+        <tr>
+          <td>P1</td>
+          <td>1</td>
+          <td><input class="initial exectime" type="number" value="3" /></td>
+          <td class="servtime"></td>
+          <td class="priority-only"><input type="text" /></td>
+        </tr>
+      </table>
+
+      <input
+        id="minus"
+        style="display: inline"
+        type="button"
+        value="-"
+        onclick="deleteRow();"
+        class="btn btn-danger"
+      />
+      <input
+        type="button"
+        value="+"
+        onclick="addRow();"
+        class="btn btn-success"
+      />
+
+      <div>
+        <p id="quantumParagraph" hidden>
+          Quantum:
+          <input style="width: 50px" id="quantum" type="text" value="3" />
+        </p>
+        <input
+          type="button"
+          value="Go"
+          onclick="draw();"
+          class="btn btn-primary my-2"
+        />
+        <br /><br />
+
+        <fresh> </fresh>
+        <p>Timer: <strong id="timer"></strong> sec</p>
+      </div>
+    </div>
+
+    <footer class="bg-dark py-4 mt-3">
+      
+    </footer>
+
+    <script src="priorityscript.js"></script>
+  </body>
+</html>

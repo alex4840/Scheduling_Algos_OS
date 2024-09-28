@@ -1,0 +1,46 @@
+.navbar-brand img {
+  border-radius: 100%;
+}
+
+body {
+  background-color: #12101b;
+  color: aliceblue;
+}
+
+.navbar {
+  border-bottom: 1.5px solid #031424;
+}
+
+.jumbotron {
+  border: 1.5px solid #00081b;
+  background-color: #2c2937;
+}
+
+footer{
+    border-top: 1.5px solid #000000;
+}
+
+fresh th {
+  background: linear-gradient(rgb(5, 92, 124), rgb(1, 42, 56));
+  text-align: left;
+  border: 1px solid black;
+  height: 400 px;
+}
+fresh td {
+  border: 1px solid black;
+  border-bottom: 0;
+  /*border-right: 0;*/
+  height: 20px;
+  text-align: left;
+}
+#curtain {
+  background-color: #12101b;
+}
+.initial.exectime{
+  color: aliceblue;
+  background-color : #12101b;
+}
+.exectime{
+  color: white;
+  background-color: #12101b;
+}
